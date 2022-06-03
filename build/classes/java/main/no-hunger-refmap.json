@@ -1,0 +1,44 @@
+{
+  "mappings": {
+    "puddlepep/nohunger/mixin/SingleStackFood": {
+      "food": "Lnet/minecraft/class_1792$class_1793;method_19265(Lnet/minecraft/class_4174;)Lnet/minecraft/class_1792$class_1793;"
+    },
+    "puddlepep/nohunger/mixin/KeepSprint": {
+      "tickMovement": "Lnet/minecraft/class_746;method_6007()V"
+    },
+    "puddlepep/nohunger/mixin/HungerToStamina": {
+      "damage": "Lnet/minecraft/class_1657;method_5643(Lnet/minecraft/class_1282;F)Z",
+      "canFoodHeal": "Lnet/minecraft/class_1657;method_7317()Z",
+      "addExhaustion": "Lnet/minecraft/class_1657;method_7322(F)V"
+    },
+    "puddlepep/nohunger/mixin/StaminaRegen": {
+      "add": "Lnet/minecraft/class_1702;method_7585(IF)V",
+      "update": "Lnet/minecraft/class_1702;method_7588(Lnet/minecraft/class_1657;)V"
+    },
+    "puddlepep/nohunger/mixin/AlwaysEdible": {
+      "isAlwaysEdible": "Lnet/minecraft/class_4174;method_19233()Z"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "puddlepep/nohunger/mixin/SingleStackFood": {
+        "food": "Lnet/minecraft/class_1792$class_1793;method_19265(Lnet/minecraft/class_4174;)Lnet/minecraft/class_1792$class_1793;"
+      },
+      "puddlepep/nohunger/mixin/KeepSprint": {
+        "tickMovement": "Lnet/minecraft/class_746;method_6007()V"
+      },
+      "puddlepep/nohunger/mixin/HungerToStamina": {
+        "damage": "Lnet/minecraft/class_1657;method_5643(Lnet/minecraft/class_1282;F)Z",
+        "canFoodHeal": "Lnet/minecraft/class_1657;method_7317()Z",
+        "addExhaustion": "Lnet/minecraft/class_1657;method_7322(F)V"
+      },
+      "puddlepep/nohunger/mixin/StaminaRegen": {
+        "add": "Lnet/minecraft/class_1702;method_7585(IF)V",
+        "update": "Lnet/minecraft/class_1702;method_7588(Lnet/minecraft/class_1657;)V"
+      },
+      "puddlepep/nohunger/mixin/AlwaysEdible": {
+        "isAlwaysEdible": "Lnet/minecraft/class_4174;method_19233()Z"
+      }
+    }
+  }
+}

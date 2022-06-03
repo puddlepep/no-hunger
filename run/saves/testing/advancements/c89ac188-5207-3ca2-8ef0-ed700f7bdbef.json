@@ -1,0 +1,29 @@
+{
+  "minecraft:husbandry/balanced_diet": {
+    "criteria": {
+      "cooked_beef": "2022-06-02 18:33:00 -0700",
+      "carrot": "2022-06-02 18:34:24 -0700"
+    },
+    "done": false
+  },
+  "minecraft:recipes/transportation/carrot_on_a_stick": {
+    "criteria": {
+      "has_carrot": "2022-06-02 18:34:22 -0700"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2022-06-02 18:33:00 -0700"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2022-06-02 18:32:32 -0700",
+      "minecraft:plains": "2022-06-02 18:36:24 -0700"
+    },
+    "done": false
+  },
+  "DataVersion": 2975
+}

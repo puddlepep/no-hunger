@@ -1,3 +1,3 @@
-# minecraft-no-hunger
+# No Hunger
 
-A Minecraft mod which alters some mechanics to make the game more similar to the pre-hunger days.
+A Minecraft Fabric mod which alters some mechanics to make the game more similar to the pre-hunger days.

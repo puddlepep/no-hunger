@@ -1,7 +1,5 @@
 package puddlepep.nohunger.mixin;
 
-import java.util.Collection;
-
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -11,6 +9,8 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.HungerManager;
 import net.minecraft.entity.player.PlayerEntity;
+import puddlepep.nohunger.NoHunger;
+import puddlepep.nohunger.config.Config;
 
 @Mixin(HungerManager.class)
 public abstract class StaminaRegen {
@@ -77,8 +77,11 @@ public abstract class StaminaRegen {
             if (sprintCooldown <= 0) {
                 ++ticksSinceStaminaRegen;
 
-                double staminaMultiplier = (1.0 - Math.min(1.0, manager.getFoodLevel() / 14.0)) * 3.0 + 1.0;
-                if (ticksSinceStaminaRegen > 10 * staminaMultiplier) {
+                int regenRate = (int) Math.floor(NoHunger.CONFIG.baseStaminaRegenRate * 20.0f);
+                double staminaUsed = 1.0 - Math.min(1.0, manager.getFoodLevel() / 14.0);
+                double staminaMultiplier = (staminaUsed * (NoHunger.CONFIG.exhaustionMultiplier - 1.0f)) + 1.0;
+
+                if (ticksSinceStaminaRegen > regenRate * staminaMultiplier) {
                     ticksSinceStaminaRegen = 0;
                     manager.setFoodLevel(Math.min(foodLevel + 1, 20));
                 }
@@ -97,7 +100,7 @@ public abstract class StaminaRegen {
                 manager.setFoodLevel(Math.max(foodLevel - 1, 0));
 
                 // if you completely use up your sprint, you need to wait 3 seconds before you can regenerate.
-                if (manager.getFoodLevel() == 0) sprintCooldown = 60;
+                if (manager.getFoodLevel() == 0) sprintCooldown = (int)Math.floor(NoHunger.CONFIG.exhaustedSprintTimeout * 20.0f);
             }
         }
 

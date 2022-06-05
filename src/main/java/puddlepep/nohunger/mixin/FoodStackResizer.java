@@ -14,7 +14,7 @@ import net.minecraft.item.Item.Settings;
 
 // sets all food in the game to be single-stack.
 @Mixin(Settings.class)
-public abstract class SingleStackFood {
+public abstract class FoodStackResizer {
     @Inject(method = "food", at = @At("HEAD"))
     private void updateStack(FoodComponent foodComponent, CallbackInfoReturnable<Settings> info) {
 

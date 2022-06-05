@@ -6,9 +6,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import puddlepep.nohunger.config.*;
 
-// todo
-//	* make beds unsleepable, spawnpoint only.
-
 public class NoHunger implements ModInitializer {
 
 	public static final Logger LOGGER = LoggerFactory.getLogger("NoHunger");
